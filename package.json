@@ -1,0 +1,27 @@
+{
+  "name": "opresponsiveproject",
+  "version": "1.0.0",
+  "description": "A responsive website for the odin project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoCort/OPResponsiveProject.git"
+  },
+  "keywords": [
+    "responsive",
+    "portfolio",
+    "website",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "george cortes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoCort/OPResponsiveProject/issues"
+  },
+  "homepage": "https://github.com/GeoCort/OPResponsiveProject#readme"
+}
