@@ -2,17 +2,18 @@
     background-color: aqua;
     /*  background style may revisit later */
     background: linear-gradient(to right bottom, aqua, white 50%);
-    padding:1rem;
+    padding:2rem;
 }
 .container{
     margin:2rem;
-    border:1px solid black;
     display: flex;
 }
 
 img{
-    height:400px;
-    width: auto;
+    object-fit:cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
 }
 .sectionTitle{
     font-size:32px;
@@ -20,10 +21,11 @@ img{
 
 }
 .aboutMe{
-    border:1px solid red;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
+    background-color:rgb(240, 241, 242);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding:2rem 1rem 1rem 2rem;
     display:flex;
     flex-direction: column;
     font-size: 20px;
@@ -34,28 +36,38 @@ img{
 .links{
     padding:.5rem;
     display:flex;
-    background-color: green;
     flex-direction:row-reverse;
     gap:1rem;
 
 }
-img{
-    border-radius: 10px;
+.links-r{
+    padding:.5rem;
+    display:flex;
+    gap:1rem;
+
+}
+
+.cards{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2rem;
 
 }
 .cardContainer{
-    border:1px solid blue;
+    border:1px solid black;
+    flex:1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 250px;
-    max-height: 300px;
+    max-width: 350px;
+    padding-bottom: 1rem;
     border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.422);
 }
 .work-section{
     min-height:  80vh;
     padding:5rem;
-    background-color: gray;
 }
 .cardContent{
     margin:.5rem;
@@ -64,16 +76,22 @@ img{
     margin-bottom: 1rem;
 }
 .cardTitle{
-    font-size: 24px;
+    font-size: 28px;
     font-style: bold;
+    padding:1rem;
 }
 .cardDesc{
-    font-size:16px;
-    opacity: 60%;
+    font-size:18px;
+    opacity: 70%;
+    padding:1rem;
 }
 
 /* Contact */
 .contact{
     padding:5rem;
+    background-color: aqua;
 
+}
+i{
+    font-size:42px;
 }
