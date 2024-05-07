@@ -1,39 +1,65 @@
+
 .hero_container{
-    background-color: aqua;
     /*  background style may revisit later */
-    background: linear-gradient(to right bottom, aqua, white 50%);
     padding:2rem;
-}
-.container{
-    margin:2rem;
+    background: linear-gradient(to right bottom, aqua, white 50%);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-img{
-    object-fit:cover;
+.container{
+    margin:2rem;
+    background-color:rgb(240, 241, 242);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+    position:relative;
+}
+.main_img{
+    background-image: url("assets/nerd_selfie.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 500px;
+    height: 500px;
+    border:1px solid black;
+    transform: translateX(-40px);
+    float: left;
+}
+.link{
+    font-size: 28px;
+}
+.cardUpperContent{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardImgContainer{
+    max-width: 450px;
+    float:left;
+}
+.cardImgContainer > img{
+    object-fit:contain;
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 250px;
 }
 .sectionTitle{
     font-size:32px;
-    padding-bottom: 1rem;
-
+    padding-bottom: 2rem;
 }
 .aboutMe{
-    background-color:rgb(240, 241, 242);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+    max-width:1900px;
     margin-top:2rem;
     margin-bottom:2rem;
     padding:3rem 1rem 1rem 3rem;
-    display:flex;
-    flex-direction: column;
-    font-size: 20px;
-    line-height: 1.5;
+    border:1px solid black;
+    line-height: 2.2;
     box-shadow: 4px;
 }
-.main_img{
-    height: 600px;
+.text-p{
+    font-size: 28px;
+
 }
 .links{
 padding-bottom: .5rem;
@@ -59,12 +85,7 @@ padding-top: .5rem;
 }
 .cardContainer{
     border:1px solid black;
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 350px;
-    padding-bottom: 1rem;
+    width: 350px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.422);
 }
@@ -109,8 +130,11 @@ i{
     font-size:42px;
 }
 @media (max-width: 750px) {
+    .aboutMe{
+        background-color: white;
+    }
     .main_img{
-        height:300px;
+        height:500px;
     }
     .container{
         flex-direction: column;
@@ -129,6 +153,9 @@ i{
     .work-section{
         padding-top: 1rem;
         padding-bottom: 2rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
     .sectionTitle{
         text-align: center;
