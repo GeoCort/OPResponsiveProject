@@ -2,7 +2,7 @@
 .hero_container{
     /*  background style may revisit later */
     padding:2rem;
-    background: linear-gradient(to right bottom, aqua, white 50%);
+    background-image: url("./assets/michael-olsen-SspE9f0fAyI-unsplash.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,19 +11,26 @@
 
 .container{
     margin:2rem;
-    background-color:rgb(240, 241, 242);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
-    position:relative;
+    display: flex;
+    
 }
+.hero-p{
+    font-size: 76px;
+    margin-bottom:25px;
+    text-align: center;
+}
+
 .main_img{
     background-image: url("assets/nerd_selfie.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     min-width: 500px;
-    height: 500px;
-    border:1px solid black;
-    transform: translateX(-40px);
-    float: left;
+    max-height: 700px;
+    display:flex;
+    flex-direction: column;
+    border-radius:10px;
+    justify-content: end;
 }
 .link{
     font-size: 28px;
@@ -36,7 +43,6 @@
 
 .cardImgContainer{
     max-width: 450px;
-    float:left;
 }
 .cardImgContainer > img{
     object-fit:contain;
@@ -45,25 +51,26 @@
     border-top-right-radius: 10px;
 }
 .sectionTitle{
-    font-size:32px;
+    font-size:48px;
     padding-bottom: 2rem;
 }
 .aboutMe{
-    max-width:1900px;
-    margin-top:2rem;
-    margin-bottom:2rem;
+    background-color: white;
     padding:3rem 1rem 1rem 3rem;
-    border:1px solid black;
-    line-height: 2.2;
+    line-height: 1.5;
+    margin-bottom:2rem;
+    margin-top:2rem;
     box-shadow: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+    height:100%;
 }
 .text-p{
     font-size: 28px;
 
 }
 .links{
-padding-bottom: .5rem;
-padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
     display:flex;
     flex-direction:row-reverse;
     gap:1rem;
@@ -77,17 +84,20 @@ padding-top: .5rem;
 }
 
 .cards{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
     gap:2rem;
+    justify-items: center;
 
 }
 .cardContainer{
-    border:1px solid black;
-    width: 350px;
+    border:2px solid black;
+    width: 450px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.422);
+    display:flex;
+    flex-direction: column;
+
 }
 .work-section{
     min-height:  80vh;
@@ -100,7 +110,7 @@ padding-top: .5rem;
     margin-bottom: 1rem;
 }
 .cardTitle{
-    font-size: 28px;
+    font-size: 34px;
     font-style: bold;
     padding:1rem;
 }
@@ -129,14 +139,37 @@ padding-top: .5rem;
 i{
     font-size:42px;
 }
-@media (max-width: 750px) {
+
+@media (max-width:1300px){
+    .container{
+        position: relative;
+        display:block;
+        
+    }
+    .main_img{
+        float:left;
+        transform: translateX(-40px);
+        border-radius: 10px;
+        min-width: 500px;
+        height: 500px;
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+@media (max-width: 800px) {
     .aboutMe{
         background-color: white;
     }
     .main_img{
         height:500px;
+        transform: translateX(0);
+        float: none;
+        border-radius: 10px;
     }
     .container{
+        display:flex;
         flex-direction: column;
         gap:2rem;
     }
@@ -146,6 +179,7 @@ i{
     }
     .links{
         justify-content: center;
+        gap:3rem;
     }
     .links-r{
         justify-content: center;
@@ -161,11 +195,27 @@ i{
         text-align: center;
     }
     .cards{
-        flex-direction: column;
-        justify-content: center;
-        align-items: centers;
+        grid-template-columns: 1fr;
     }
     .footerContent{
         margin:1rem;
+    }
+    .cardContainer{
+        width:600px;
+    }
+    .cardImgContainer{
+        width:100%;
+    }
+    .cardContent{
+        padding:2rem;
+    }
+    .cardContent>p{
+        font-size: 24px;
+    }
+    .cardTitle{
+        font-size: 34px;
+    }
+    .link{
+        font-size:54px;
     }
 }
